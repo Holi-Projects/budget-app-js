@@ -17,14 +17,15 @@ addEx.addEventListener("click", function(){
        alertDisplay()
     }
     else {
-    
+    const editItem
+    const rm
     const display = document.querySelector("#display")
 
     let li = document.createElement("li")
 
     li.innerHTML = "<h6>" +expName.value+"</h6>" + "<h5>$" + exp.value+"</h5>" + 
-    "<a href='#' class='editItem' onclick='editItem(this)'><i class='fas fa-edit' aria-hidden='true'></i></a>&nbsp;&nbsp;" + 
-    "<a href='#' class='trash' onclick='rm(this)'><i class='fas fa-trash' aria-hidden='true'></i></a>" ;
+    "<a href='#' class='editItem' onclick='editItem(this)'><i class='fa fa-edit' aria-hidden='true'></i></a>&nbsp;&nbsp;" + 
+    "<a href='#' class='trash' onclick='rm(this)'><i class='fa fa-trash' aria-hidden='true'></i></a>" ;
      
     li.classList.add("list-item")
     display.appendChild(li)
@@ -67,7 +68,7 @@ function bal(amountIn, amountOut){
     return balAmount
 }
 
-function rm(btn){
+  rm = (btn) =>{
 
     let amt = btn.parentElement.childNodes[1].innerText
     exSum = exSum - parseInt(amt.slice(1, amt.length))
@@ -77,7 +78,7 @@ function rm(btn){
     
 }
 
-function editItem(btn){
+  editItem = (btn) =>{
   
     let name = btn.parentElement.firstChild.innerText
     let amt = btn.parentElement.childNodes[1].innerText
