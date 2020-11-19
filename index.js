@@ -17,8 +17,8 @@ addEx.addEventListener("click", function(){
        alertDisplay()
     }
     else {
-    const editItem
-    const rm
+    //const editItem
+    //const rm
     const display = document.querySelector("#display")
 
     let li = document.createElement("li")
